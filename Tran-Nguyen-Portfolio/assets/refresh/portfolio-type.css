@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("bricolage-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("bricolage-600.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Spectral;
+  src: url("spectral-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Spectral;
+  src: url("spectral-400-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+:root {
+  --portfolio-display: "Bricolage Grotesque", Arial, sans-serif;
+  --portfolio-text: Spectral, Georgia, serif;
+  --sans: var(--portfolio-display);
+  --serif: var(--portfolio-display);
+  --mono: var(--portfolio-display);
+}
+body, button, .model-tools button { font-family: var(--portfolio-display); }
+h1, h2, h3, .brand, .archive summary, .next-project a:last-child {
+  font-family: var(--portfolio-display);
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+h1 em, h2 em, h3 em { font-style: normal; font-weight: inherit; }
+.hero h1 {
+  font-size: clamp(58px, 8vw, 110px);
+  line-height: 1.02;
+  font-weight: 600;
+  white-space: normal;
+  letter-spacing: -.06em;
+}
+.brand { font-size: clamp(20px, 2.1vw, 28px); }
+.hero .lead, .case-intro, .work-card > p, .story-block p, .model-section > p:not(.model-status),
+.about-content > p, .archive dd {
+  font-family: var(--portfolio-text);
+  font-weight: 400;
+}
+.hero .lead { font-size: clamp(20px, 1.68vw, 24px); line-height: 1.4; }
+.work-card > p, .archive dd {font-size: 17px; line-height: 1.45;}
+.story-block p, .model-section > p:not(.model-status), .about-content > p:not(.about-intro) {font-size: 19px; line-height: 1.53;}
+.about-intro {font-size: clamp(26px,2.3vw,34px); line-height: 1.2;}
+.photo-album figcaption {font: italic 19px/1.25 var(--portfolio-text);}
+.gallery-control {font: 400 11px/1.2 var(--portfolio-display); font-variant-numeric: tabular-nums;}
+.eyebrow, .card-meta, .case-main aside dt, .next-project small {font-family: var(--portfolio-display); font-weight: 600; letter-spacing: .07em;}
+.card-meta {font-size: 12px;}
+.foot-main h2 {margin: 0;}
+.edu ul {list-style: none; margin: 14px 0 0; padding: 0;}
+.edu li {margin: 7px 0;}
+.edu li:has(.award-copy) {display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: baseline; column-gap: 12px;}
+.edu .award-copy {line-height: 1.4;}
+.edu .award-copy strong {font-weight: 600;}
+.edu .award-year {font-size: 12px; font-variant-numeric: tabular-nums; color: #634f59;}
+@media (max-width: 680px) {
+  .hero h1 {font-size: clamp(43px, 12.2vw, 72px);}
+  .hero .lead {font-size: 20px;}
+  .brand {font-size: 21px;}
+  .photo-album figcaption {font-size: 17px;}
+  .section-heading h2, .about-grid h2, .foot-main h2 {font-size: clamp(38px, 10.8vw, 60px);}
+}

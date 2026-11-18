@@ -1,0 +1,20 @@
+/* Reading styles for Tran’s portfolio */
+:root {
+  --portfolio-display: "Helvetica Neue", Arial, sans-serif;
+  --portfolio-text: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.hero h1 {
+  font-weight: 600;
+  letter-spacing: -.05em;
+}
+.hero .lead {
+  font-family: var(--portfolio-text);
+  font-size: clamp(18px, 1.45vw, 22px);
+  line-height: 1.55;
+  letter-spacing: normal;
+  max-width: 46ch;
+  color: #443b40;
+}
+.work-card > p, .archive dd { line-height: 1.55; }
+.photo-album figcaption { font-style: normal; font-size: 16px; }
+.document-preview { display: block; width: 100%; height: 100%; object-fit: cover; }
