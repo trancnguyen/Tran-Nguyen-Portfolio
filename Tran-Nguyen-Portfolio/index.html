@@ -1042,14 +1042,24 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 8px;
-        padding: 9px 3px 0;
+        flex-wrap: wrap;
+        gap: 0 6px;
+        padding: 9px 0 0;
         font: italic 21px/1.15 var(--serif);
+      }
+      #gallery-caption {
+        width: max-content;
+        max-width: 100%;
+        font-size: 0.875rem;
+        line-height: 1.4;
       }
       .gallery-control {
         display: flex;
         align-items: center;
-        gap: 4px;
+        margin-inline-start: auto;
+        flex: none;
+        gap: 0;
+        letter-spacing: 0.04em;
         font: 10px var(--mono);
         color: #66535b;
         white-space: nowrap;
@@ -1063,6 +1073,12 @@
         font:
           17px Arial,
           sans-serif;
+      }
+      @media (pointer: fine) {
+        .gallery-control button {
+          width: 26px;
+          padding-inline: 0;
+        }
       }
       .gallery-control button:hover {
         background: #f2e1e7;
